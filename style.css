@@ -1,15 +1,11 @@
 html, body {
     height: 100%;
-    background-color: #FFF;
     margin: 0;
-    padding: 0;
 }
 
 body {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    margin-top: 2em;
 }
 
 div {
@@ -30,6 +26,15 @@ div {
     max-width: 50%;
     background: rgb(22, 177, 177);
     padding: .5em;
+    position: relative;
+}
+form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    margin: 10px 15%;
 }
 
 .draw{
@@ -59,6 +64,7 @@ input[type=text] {
     height: 20px;
     text-align: center;
     border-radius: 15px;
+    margin: 5px 0;
 }
 
 #volume {
@@ -71,12 +77,19 @@ input[type=text] {
     width: 50%;
     text-align: center;
     border-radius: 15px;
+    margin: 5px 0;
+    color: gray;
 }
+
 #clear {
     position: relative;
     top: 80%;
     left: 35%;
     width: 32%;
+}
+
+#clear:hover {
+    cursor: pointer;
 }
 
 #calculate {
@@ -101,5 +114,6 @@ button {
     transition: all 0.2s;
 }
 button:hover {
-    background-color:#4095c6
+    background-color:#4095c6;
+    cursor:pointer;
 }

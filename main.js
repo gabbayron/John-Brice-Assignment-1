@@ -18,6 +18,7 @@ function calcVolume(e) {
         volume.textContent = (4 / 3) * Math.PI * Math.pow(radius, 3);
         draw(radius)
     }
+    volume.style.color = 'black'
 }
 
 // Canvas 
@@ -46,9 +47,9 @@ drawBtn.addEventListener('click', calcVolume);
 clearBtn.onclick = function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear Canvas
     radiusInput.value = ''
-    volume.textContent = ''
+    volume.textContent = 'Volume'
+    volume.style.color = 'gray'
 }
-
 
 // Bonus 
 let bonusR = 0
@@ -60,7 +61,7 @@ function bonusDraw() {
     ctx.strokeStyle = 'red';
     ctx.stroke()
     if (bonusR * 2 > canvas.height) {
-
+        return
     }
     else {
         bonusR += 1.5
