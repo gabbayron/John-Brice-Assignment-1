@@ -30,15 +30,15 @@ let y = canvas.height / 2
 
 
 function draw(r) {
+    // if circle is bigger then canvas measures
+    if ((r * 2 > canvas.height - 2)) {
+        alert('Circle Is Out Of Border')
+    }
     ctx.beginPath()
     ctx.arc(x, y, r, 0, 2 * Math.PI);
     ctx.lineWidth = 1
     ctx.strokeStyle = 'red';
     ctx.stroke();
-    // if circle is bigger then canvas measures
-    if ((r * 2 > canvas.height)) {
-        alert('Circle Is Out Of Border')
-    }
 }
 
 // Events
@@ -60,7 +60,7 @@ function bonusDraw() {
     ctx.lineWidth = 1
     ctx.strokeStyle = 'red';
     ctx.stroke()
-    if (bonusR * 2 > canvas.height-4) {
+    if (bonusR * 2 > canvas.height - 4) {
         return
     }
     else {
