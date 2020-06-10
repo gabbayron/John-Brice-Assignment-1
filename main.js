@@ -60,7 +60,7 @@ function bonusDraw() {
     ctx.lineWidth = 1
     ctx.strokeStyle = 'red';
     ctx.stroke()
-    if (bonusR * 2 > canvas.height) {
+    if (bonusR * 2 > canvas.height-4) {
         return
     }
     else {
